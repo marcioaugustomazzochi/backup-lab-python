@@ -26,12 +26,13 @@ backup_lab/
 ├── backups/              # backups gerados (não versionar)
 ├── logs/                 # logs de execução (não versionar)
 └── prints/               # prints e saídas dos comandos
+
 🛠 Tecnologias utilizadas
 - Python 3.10+ – linguagem principal do projeto  
 - Cryptography (Fernet) – criptografia dos backups  
 - Kali Linux – ambiente de desenvolvimento e testes  
 - SHA256 – verificação de integridade  
-- Git/GitHub – versionamento e publicação do código  
+- Git/GitHub – versionamento e publicação do código
 🏃 Como usar
 - 📁 Criar arquivos importantes em dados_importantes/
 - 🗜️ Executar backup: python3 src/backup.py
@@ -61,10 +62,8 @@ logs/
 dados_importantes/
 *.key
 🔗 Documentação dos prints
-
-Para ver todos os prints das saídas e comandos, consulte o arquivo prints.md
- na pasta prints/.
-
+Para ver todos os prints das saídas e comandos,
+consulte o arquivo 'prints.md' na pasta 'prints/'.
 ⚙️ Pré-requisitos
 - 🐍 Python 3.10+
 - 🔐 Biblioteca cryptography
@@ -74,5 +73,4 @@ Instalação do ambiente virtual:
 python3 -m venv venv
 source venv/bin/activate
 pip install cryptography
-
 Desenvolvido com Python & Kali Linux

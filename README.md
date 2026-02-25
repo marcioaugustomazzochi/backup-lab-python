@@ -17,7 +17,7 @@
 
 ## 🗂 Estrutura do projeto
 
-```text
+`text
 backup_lab/
 ├── backup.py
 ├── restore.py
@@ -27,7 +27,6 @@ backup_lab/
 ├── logs/                 # logs de execução (não versionar)
 └── prints/               # prints e saídas dos comandos
 ---
-
 ## 🛠 Tecnologias utilizadas
 
 - Python 3.10+ – linguagem principal do projeto  

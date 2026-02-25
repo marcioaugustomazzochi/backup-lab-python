@@ -17,7 +17,7 @@
 
 ## 🗂 Estrutura do projeto
 
-text
+```text
 backup_lab/
 ├── backup.py
 ├── restore.py

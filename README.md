@@ -2,7 +2,8 @@
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)](https://www.python.org/)  
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)  
-[![GitHub Repo Size](https://img.shields.io/github/repo-size/SeuUsuario/backup_lab)]()
+[![GitHub Repo Size](https://img.shields.io/badge/Repo-Size-blue)]()  
+[![Build Status](https://img.shields.io/badge/Status-In%20Progress-yellow)]()
 
 > Este projeto demonstra a criação de **backups**, **criptografia**, **restauração** e **verificação de integridade** utilizando **Python** e **Kali Linux**.
 
@@ -19,31 +20,40 @@
 
 ## 🗂 Estrutura do projeto
 
-
+```text
 backup_lab/
 ├── backup.py
 ├── restore.py
-├── src/ # scripts Python
-├── dados_importantes/ # arquivos a serem salvos (não versionar)
-├── backups/ # backups gerados (não versionar)
-├── logs/ # logs de execução (não versionar)
-└── prints/ # prints e saídas dos comandos
+├── src/                  # scripts Python
+├── dados_importantes/    # arquivos a serem salvos (não versionar)
+├── backups/              # backups gerados (não versionar)
+├── logs/                 # logs de execução (não versionar)
+└── prints/               # prints e saídas dos comandos
+⚙️ Pré-requisitos
 
+🐍 Python 3.10+
 
----
+🔐 Biblioteca cryptography
 
-## ⚙️ Pré-requisitos
-
-- 🐍 Python 3.10+  
-- 🔐 Biblioteca `cryptography`  
-- 💻 Sistema Linux (testado no Kali Linux)
+💻 Sistema Linux (testado no Kali Linux)
 
 Instalação do ambiente virtual:
 
-```bash
 python3 -m venv venv
 source venv/bin/activate
 pip install cryptography
+🛠 Tecnologias utilizadas
+
+Python 3.10+ – linguagem principal do projeto
+
+Cryptography (Fernet) – para criptografia de backups
+
+Kali Linux – ambiente de desenvolvimento e testes
+
+SHA256 – verificação de integridade
+
+Git/GitHub – versionamento e publicação do código
+
 🏃 Como usar
 
 📁 Criar arquivos importantes em dados_importantes/

@@ -1,8 +1,8 @@
 # 🔐 Projeto de Backup e Restauração
 
-[![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)](https://www.python.org/) 
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE) 
-[![GitHub Repo Size](https://img.shields.io/badge/Repo-Size-blue)]() 
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)](https://www.python.org/)  
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)  
+[![GitHub Repo Size](https://img.shields.io/badge/Repo-Size-blue)]()  
 [![Build Status](https://img.shields.io/badge/Status-In%20Progress-yellow)]()
 
 > Este projeto demonstra a criação de **backups**, **criptografia**, **restauração** e **verificação de integridade** utilizando **Python** e **Kali Linux**.
@@ -22,14 +22,13 @@
 
 
 backup_lab/
-│
-├─ backup.py
-├─ restore.py
-├─ src/
-├─ dados_importantes/
-├─ backups/
-├─ logs/
-└─ prints/
+backup_lab/backup.py
+backup_lab/restore.py
+backup_lab/src/ # scripts Python
+backup_lab/dados_importantes/ # arquivos a serem salvos (não versionar)
+backup_lab/backups/ # backups gerados (não versionar)
+backup_lab/logs/ # logs de execução (não versionar)
+backup_lab/prints/ # prints e saídas dos comandos
 
 
 ---
@@ -89,14 +88,13 @@ python3 src/restore.py
 
 
 backup_lab/
-│
-├─ backup.py
-├─ restore.py
-├─ src/
-├─ dados_importantes/
-├─ backups/
-├─ logs/
-└─ prints/
+backup_lab/backup.py
+backup_lab/restore.py
+backup_lab/src/
+backup_lab/dados_importantes/ # ignorado pelo Git
+backup_lab/backups/ # ignorado pelo Git
+backup_lab/logs/ # ignorado pelo Git
+backup_lab/prints/ # prints de comandos e saídas
 
 
 Adicionar `.gitignore` recomendado:

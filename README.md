@@ -24,11 +24,11 @@
 backup_lab/
 backup_lab/backup.py
 backup_lab/restore.py
-backup_lab/src/ # scripts Python
-backup_lab/dados_importantes/ # arquivos a serem salvos (não versionar)
-backup_lab/backups/ # backups gerados (não versionar)
-backup_lab/logs/ # logs de execução (não versionar)
-backup_lab/prints/ # prints e saídas dos comandos
+backup_lab/src/
+backup_lab/dados_importantes/
+backup_lab/backups/
+backup_lab/logs/
+backup_lab/prints/
 
 
 ---
@@ -91,10 +91,10 @@ backup_lab/
 backup_lab/backup.py
 backup_lab/restore.py
 backup_lab/src/
-backup_lab/dados_importantes/ # ignorado pelo Git
-backup_lab/backups/ # ignorado pelo Git
-backup_lab/logs/ # ignorado pelo Git
-backup_lab/prints/ # prints de comandos e saídas
+backup_lab/dados_importantes/
+backup_lab/backups/
+backup_lab/logs/
+backup_lab/prints/
 
 
 Adicionar `.gitignore` recomendado:

@@ -25,11 +25,11 @@ backup_lab/
 │
 ├─ backup.py
 ├─ restore.py
-├─ src/ # scripts Python
-├─ dados_importantes/ # arquivos a serem salvos (não versionar)
-├─ backups/ # backups gerados (não versionar)
-├─ logs/ # logs de execução (não versionar)
-└─ prints/ # prints e saídas dos comandos
+├─ src/
+├─ dados_importantes/
+├─ backups/
+├─ logs/
+└─ prints/
 
 
 ---
@@ -93,10 +93,10 @@ backup_lab/
 ├─ backup.py
 ├─ restore.py
 ├─ src/
-├─ dados_importantes/ # ignorado pelo Git
-├─ backups/ # ignorado pelo Git
-├─ logs/ # ignorado pelo Git
-└─ prints/ # prints de comandos e saídas
+├─ dados_importantes/
+├─ backups/
+├─ logs/
+└─ prints/
 
 
 Adicionar `.gitignore` recomendado:
@@ -117,6 +117,7 @@ dados_importantes/
 Para ver todos os prints das saídas e comandos,
 consulte o arquivo 'prints.md' na pasta 'prints/'.
 
+
 ---
 
-Desenvolvido com Python e Kali Linux
+Desenvolvido com Python & Kali Linux

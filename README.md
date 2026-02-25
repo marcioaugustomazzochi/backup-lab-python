@@ -17,15 +17,15 @@
 
 ## 🗂 Estrutura do projeto
 
-- backup_lab/
-- backup_lab/backup.py
-- backup_lab/restore.py
-- backup_lab/src/                  # scripts Python
-- backup_lab/dados_importantes/    # arquivos a serem salvos (não versionar)
-- backup_lab/backups/              # backups gerados (não versionar)
-- backup_lab/logs/                 # logs de execução (não versionar)
-- backup_lab/prints/               # prints e saídas dos comandos
-
+text
+backup_lab/
+├── backup.py
+├── restore.py
+├── src/                  # scripts Python
+├── dados_importantes/    # arquivos a serem salvos (não versionar)
+├── backups/              # backups gerados (não versionar)
+├── logs/                 # logs de execução (não versionar)
+└── prints/               # prints e saídas dos comandos
 ---
 
 ## 🛠 Tecnologias utilizadas

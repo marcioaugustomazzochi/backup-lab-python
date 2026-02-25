@@ -1,7 +1,6 @@
 # 🔐 Projeto de Backup e Restauração
 
-[![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)](https://www.python.org/)  [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)  
-[![GitHub Repo Size](https://img.shields.io/badge/Repo-Size-blue)]()  [![Build Status](https://img.shields.io/badge/Status-In%20Progress-yellow)]()
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)](https://www.python.org/) [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE) [![GitHub Repo Size](https://img.shields.io/badge/Repo-Size-blue)]() [![Build Status](https://img.shields.io/badge/Status-In%20Progress-yellow)]()
 
 > Este projeto demonstra a criação de **backups**, **criptografia**, **restauração** e **verificação de integridade** utilizando **Python** e **Kali Linux**.
 

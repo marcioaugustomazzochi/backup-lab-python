@@ -1,8 +1,8 @@
 # 🔐 Projeto de Backup e Restauração
 
-[![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)](https://www.python.org/) 
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE) 
-[![GitHub Repo Size](https://img.shields.io/badge/Repo-Size-blue)]() 
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)](https://www.python.org/)  
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)  
+[![GitHub Repo Size](https://img.shields.io/badge/Repo-Size-blue)]()  
 [![Build Status](https://img.shields.io/badge/Status-In%20Progress-yellow)]()
 
 > Este projeto demonstra a criação de **backups**, **criptografia**, **restauração** e **verificação de integridade** utilizando **Python** e **Kali Linux**.
@@ -13,11 +13,8 @@
 
 
 💾 Automatizar backups de arquivos importantes
-
 🔒 Criptografar os backups usando Fernet
-
 ✅ Verificar integridade com hash SHA256
-
 🔄 Restaurar os arquivos de forma segura
 
 
@@ -42,9 +39,7 @@ backup_lab/
 
 
 🐍 Python 3.10+
-
 🔐 Biblioteca cryptography
-
 💻 Sistema Linux (testado no Kali Linux)
 
 
@@ -62,13 +57,9 @@ pip install cryptography
 
 
 Python 3.10+ – linguagem principal do projeto
-
 Cryptography (Fernet) – criptografia dos backups
-
 Kali Linux – ambiente de desenvolvimento e testes
-
 SHA256 – verificação de integridade
-
 Git/GitHub – versionamento e publicação do código
 
 
@@ -93,7 +84,7 @@ echo "123456" > backups/*.hash
 python3 src/restore.py
 
 
-> ⚠️ Atenção: os arquivos em `dados_importantes/`, `backups/`, `logs/` e a chave `.key não devem ser comitados` no GitHub.
+> ⚠️ Atenção: os arquivos em `dados_importantes/`, `backups/`, `logs/` e a chave `.key` **não devem ser comitados** no GitHub.
 
 ---
 
@@ -124,8 +115,6 @@ dados_importantes/
 
 ## 🔗 Documentação dos prints
 
-Para ver todos os **prints das saídas e comandos**, consulte o arquivo [`prints.md`](prints/prints.md) na pasta `prints/`.
 
----
-
-Made with ❤️ using **Python** & **Kali Linux**
+Para ver todos os prints das saídas e comandos,
+consulte o arquivo 'prints.md' na pasta 'prints/'.

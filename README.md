@@ -21,13 +21,67 @@
 ## 🗂 Estrutura do projeto
 
 - backup_lab/
-  - backup.py
-  - restore.py
-  - src/                  # scripts Python
-  - dados_importantes/    # arquivos a serem salvos (não versionar)
-  - backups/              # backups gerados (não versionar)
-  - logs/                 # logs de execução (não versionar)
-  - prints/               # prints e saídas dos comandos
+- backup_lab/backup.py
+- backup_lab/restore.py
+- backup_lab/src/                  # scripts Python
+- backup_lab/dados_importantes/    # arquivos a serem salvos (não versionar)
+- backup_lab/backups/              # backups gerados (não versionar)
+- backup_lab/logs/                 # logs de execução (não versionar)
+- backup_lab/prints/               # prints e saídas dos comandos
+
+---
+
+## 🛠 Tecnologias utilizadas
+
+- Python 3.10+ – linguagem principal do projeto  
+- Cryptography (Fernet) – criptografia dos backups  
+- Kali Linux – ambiente de desenvolvimento e testes  
+- SHA256 – verificação de integridade  
+- Git/GitHub – versionamento e publicação do código  
+
+---
+
+## 🏃 Como usar
+
+- 📁 Criar arquivos importantes em `dados_importantes/`  
+- 🗜️ Executar backup:  
+  `python3 src/backup.py`  
+- 🔑 Verificar integridade:  
+  `sha256sum backups/*.zip.enc`  
+- 🔄 Restaurar backup:  
+  `python3 src/restore.py`  
+- ⚠️ Testar integridade falha (opcional):  
+  `echo "123456" > backups/*.hash`  
+  `python3 src/restore.py`  
+
+> ⚠️ Atenção: os arquivos em `dados_importantes/`, `backups/`, `logs/` e a chave `.key` **não devem ser comitados** no GitHub.
+
+---
+
+## 📂 Estrutura de pastas sugerida
+
+- backup_lab/
+- backup_lab/backup.py
+- backup_lab/restore.py
+- backup_lab/src/
+- backup_lab/dados_importantes/   # ignorado pelo Git
+- backup_lab/backups/             # ignorado pelo Git
+- backup_lab/logs/                # ignorado pelo Git
+- backup_lab/prints/              # prints de comandos e saídas
+
+Adicionar `.gitignore` recomendado:
+
+- venv/  
+- backups/  
+- logs/  
+- dados_importantes/  
+- *.key  
+
+---
+
+## 🔗 Documentação dos prints
+
+Para ver todos os **prints das saídas e comandos**, consulte o arquivo `prints.md` na pasta `prints/`.
 
 ---
 
@@ -43,69 +97,5 @@ Instalação do ambiente virtual:
 python3 -m venv venv
 source venv/bin/activate
 pip install cryptography
-🛠 Tecnologias utilizadas
-
-Python 3.10+ – linguagem principal do projeto
-
-Cryptography (Fernet) – criptografia dos backups
-
-Kali Linux – ambiente de desenvolvimento e testes
-
-SHA256 – verificação de integridade
-
-Git/GitHub – versionamento e publicação do código
-
-🏃 Como usar
-
-📁 Criar arquivos importantes em dados_importantes/
-
-🗜️ Executar backup:
-python3 src/backup.py
-
-🔑 Verificar integridade:
-sha256sum backups/*.zip.enc
-
-🔄 Restaurar backup:
-python3 src/restore.py
-
-⚠️ Testar integridade falha (opcional):
-echo "123456" > backups/*.hash
-python3 src/restore.py
-
-⚠️ Atenção: os arquivos em dados_importantes/, backups/, logs/ e a chave .key não devem ser comitados no GitHub.
-
-📂 Estrutura de pastas sugerida
-
-backup_lab/
-
-backup.py
-
-restore.py
-
-src/
-
-dados_importantes/ # ignorado pelo Git
-
-backups/ # ignorado pelo Git
-
-logs/ # ignorado pelo Git
-
-prints/ # prints de comandos e saídas
-
-Adicionar .gitignore recomendado:
-
-venv/
-
-backups/
-
-logs/
-
-dados_importantes/
-
-*.key
-
-🔗 Documentação dos prints
-
-Para ver todos os prints das saídas e comandos, consulte o arquivo prints.md na pasta prints/.
 
 Desenvolvido com Python & Kali Linux

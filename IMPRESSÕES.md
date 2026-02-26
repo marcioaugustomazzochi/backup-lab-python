@@ -230,7 +230,7 @@ Lista os arquivos restaurados para validação.
 
 Comandos executados:
 
-$ echo "123456" > backups/*.hash  
+$ echo "123456" > backups/backup_20260225_094050.hash 
 $ python3 restore.py  
 
 Descrição:

@@ -231,6 +231,31 @@ Integridade comprometida! Hash inválido.
 
 ---
 
+# 🧠 Projeto Inspirado em Boas Práticas da ISO/IEC 27001
+
+Este projeto foi estruturado com base em princípios alinhados à norma internacional ISO/IEC 27001, referência global para Sistemas de Gestão de Segurança da Informação (SGSI).
+
+Embora não represente uma implementação formal de certificação, o sistema aplica conceitos fundamentais presentes nos controles do Anexo A.
+
+## 🔐 A.8 – Gestão de Ativos
+✔ Organização e proteção de dados sensíveis  
+✔ Estrutura controlada de armazenamento  
+
+## 🔒 A.10 – Criptografia
+✔ Uso de criptografia simétrica (Fernet)  
+✔ Proteção contra acesso não autorizado  
+
+## 📜 A.12 – Segurança nas Operações
+✔ Registro de logs  
+✔ Automação de backup  
+✔ Controle de integridade  
+
+## 🛡 A.16 – Gestão de Incidentes
+✔ Detecção de adulteração  
+✔ Bloqueio de restauração em caso de hash inválido  
+
+---
+
 # 📌 Status do Projeto
 
 🟢 Concluído  

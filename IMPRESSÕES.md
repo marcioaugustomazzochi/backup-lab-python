@@ -24,6 +24,9 @@ Ele demonstra a aplicação prática de princípios fundamentais da Segurança d
 
 O sistema simula controles defensivos utilizados em ambientes corporativos.
 
+> ⚠ Projeto desenvolvido para fins educacionais e de demonstração técnica,
+> simulando controles reais aplicáveis em ambientes corporativos.
+
 ---
 
 ## 🎯 Objetivos Técnicos

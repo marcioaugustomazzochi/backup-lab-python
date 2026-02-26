@@ -1,260 +1,228 @@
-# 🔐 Projeto de Backup e Restauração com Verificação de Integridade e Criptografia
+# 🔐 Secure Backup System
+### Projeto Profissional de Backup com Verificação de Integridade e Criptografia
 
-Este projeto demonstra a criação de um sistema de backup utilizando Python no Kali Linux, incluindo:
-
-- Compactação de arquivos
-- Geração de hash SHA256 para integridade
-- Registro de logs
-- Implementação de criptografia com Fernet
-- Teste de falha de integridade
-
----
-
-# 🎯 Objetivo do Projeto
-
-O objetivo é desenvolver um sistema simples, porém completo, que:
-
-- Automatize a criação de backups
-- Garanta integridade por meio de hash SHA256
-- Permita restauração segura
-- Implemente criptografia simétrica
-- Detecte alterações maliciosas nos arquivos
+![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
+![Linux](https://img.shields.io/badge/Platform-Kali%20Linux-black?logo=linux)
+![Security](https://img.shields.io/badge/Focus-Security-red)
+![Encryption](https://img.shields.io/badge/Encryption-Fernet-green)
+![Hash](https://img.shields.io/badge/Hash-SHA256-orange)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 
 ---
 
-# 🗂 Estrutura Final do Projeto
+## 🛡 Sobre o Projeto
 
-backup_lab/  
-├── backup.py  
-├── restore.py  
-├── dados_importantes/  
-├── dados_restaurados/  
-├── backups/  
-├── logs/  
-└── venv/  
+Sistema completo de backup seguro desenvolvido em Python no Kali Linux, aplicando conceitos reais de Segurança da Informação:
+
+- Integridade de dados
+- Criptografia simétrica
+- Registro estruturado de logs
+- Automação de processos
+- Detecção de adulteração
 
 ---
 
-# 🔗 Prints do Projeto – Ordem Real de Execução
+## 🧱 Estrutura do Projeto
+
+```
+backup_lab/
+├── backup.py
+├── restore.py
+├── dados_importantes/
+├── dados_restaurados/
+├── backups/
+├── logs/
+└── venv/
+```
+
+---
+
+# 🖥 Demonstração – Execução Completa
 
 ---
 
 ## 1️⃣ Desktop do Kali Linux
 
-Mostra a interface gráfica do sistema operacional Kali Linux.  
-É o ambiente onde todos os comandos e scripts serão executados.  
-Não há comandos neste print. Serve como introdução ao ambiente.
+Ambiente operacional utilizado no desenvolvimento e testes.
 
-<img width="1920" height="936" alt="PRINT 1 Desktop do Kali" src="https://github.com/user-attachments/assets/a3c0611a-9825-48fb-ac2b-4dc01665a638" />
+<img width="1920" height="936" alt="Desktop Kali Linux" src="https://github.com/user-attachments/assets/a3c0611a-9825-48fb-ac2b-4dc01665a638" />
 
 ---
 
-## 2️⃣ Criação da Estrutura Inicial do Projeto
+## 2️⃣ Criação da Estrutura Inicial
 
-Comandos executados:
+```bash
+mkdir ~/backup_lab
+cd ~/backup_lab
+mkdir backups logs
+```
 
-$ mkdir ~/backup_lab  
-$ cd ~/backup_lab  
-$ mkdir src backups logs  
-
-Descrição:
-
-Cria a pasta principal backup_lab no diretório home.  
-Acessa o diretório criado.  
-Cria três subpastas principais:
-- src → para scripts
-- backups → para armazenar arquivos gerados
-- logs → para armazenar registros de execução
-
-<img width="1920" height="936" alt="PRINT 2 Terminal mostrando a criação das pastas" src="https://github.com/user-attachments/assets/a8a5acf5-deb5-43db-9c24-6a2420a972c1" />
+<img width="1920" height="936" alt="Criação da Estrutura" src="https://github.com/user-attachments/assets/a8a5acf5-deb5-43db-9c24-6a2420a972c1" />
 
 ---
 
-## 3️⃣ Criação do Diretório e Arquivos Importantes
+## 3️⃣ Criação de Dados Sensíveis
 
-Comandos executados:
+```bash
+mkdir dados_importantes
+echo "Relatorio Confidencial" > dados_importantes/relatorio.txt
+echo "Senha super secreta" > dados_importantes/senha.txt
+```
 
-$ mkdir dados_importantes  
-$ echo "Relatorio Confidencial" > dados_importantes/relatorio.txt  
-$ echo "Senha super secreta" > dados_importantes/senha.txt  
-$ ls -la dados_importantes  
-
-Descrição:
-
-Cria o diretório dados_importantes.  
-Cria dois arquivos simulando dados sensíveis.  
-Lista os arquivos para confirmar a criação.
-
-<img width="1920" height="936" alt="PRINT 3 preparação do ambiente" src="https://github.com/user-attachments/assets/d317ed8e-64e5-43e8-b7db-98ea0704b514" />
+<img width="1920" height="936" alt="Preparação do Ambiente" src="https://github.com/user-attachments/assets/d317ed8e-64e5-43e8-b7db-98ea0704b514" />
 
 ---
 
-## 4️⃣ Execução do Script de Backup
+## 4️⃣ Execução do Backup Inicial
 
-Comando executado:
+```bash
+python3 backup.py
+```
 
-$ python3 backup.py  
-
-Descrição:
-
-Executa o script backup.py.  
-Gera um arquivo compactado .zip dentro da pasta backups.  
-Calcula e exibe o hash SHA256 para verificação de integridade.
-
-<img width="1920" height="936" alt="PRINT 4 02_backup_execution" src="https://github.com/user-attachments/assets/8fc27a8f-f04c-4a0a-be22-2871c5906696" />
+<img width="1920" height="936" alt="Execução do Backup" src="https://github.com/user-attachments/assets/8fc27a8f-f04c-4a0a-be22-2871c5906696" />
 
 ---
 
-## 5️⃣ Verificação da Integridade
+## 5️⃣ Validação Manual de Integridade
 
-Comando executado:
+```bash
+sha256sum backups/backup_YYYYMMDD_HHMMSS.zip
+```
 
-$ sha256sum backups/backup_20260225_094050.zip  
-
-Descrição:
-
-Calcula manualmente o hash SHA256 do arquivo gerado.  
-Permite comparar com o hash exibido pelo script para validar integridade.
-
-<img width="1920" height="936" alt="PRINT 5 03_hash_validation" src="https://github.com/user-attachments/assets/3fea2e6d-3031-4e3b-9c55-30217d9ed507" />
+<img width="1920" height="936" alt="Validação de Hash" src="https://github.com/user-attachments/assets/3fea2e6d-3031-4e3b-9c55-30217d9ed507" />
 
 ---
 
-## 6️⃣ Teste de Extração do Backup
+## 6️⃣ Extração Manual do Backup
 
-Comandos executados:
+```bash
+unzip backups/*.zip -d .
+ls
+```
 
-$ unzip backups/*.zip -d .  
-$ ls  
-
-Descrição:
-
-Descompacta o arquivo .zip no diretório atual.  
-Lista os arquivos extraídos.  
-Valida que o backup pode ser restaurado manualmente.
-
-<img width="1920" height="936" alt="PRINT 6 05_restore_structured_success" src="https://github.com/user-attachments/assets/a64b3db2-ed50-46d2-b56f-0c08d551428a" />
+<img width="1920" height="936" alt="Extração Manual" src="https://github.com/user-attachments/assets/a64b3db2-ed50-46d2-b56f-0c08d551428a" />
 
 ---
 
-## 7️⃣ Novo Backup e Verificação de Log
+## 7️⃣ Novo Backup e Registro em Log
 
-Comandos executados:
+```bash
+rm -rf backups/
+python3 backup.py
+cat logs/backup.log
+```
 
-$ rm -rf backups/  
-$ python3 backup.py  
-$ cat logs/backup.log  
-
-Descrição:
-
-Remove backups anteriores.  
-Executa novamente o script.  
-Exibe o arquivo de log contendo detalhes técnicos da execução.
-
-<img width="1920" height="936" alt="PRINT 7 06_logging_system" src="https://github.com/user-attachments/assets/29698e32-53d7-4bfc-907e-79deda0502aa" />
+<img width="1920" height="936" alt="Sistema de Logs" src="https://github.com/user-attachments/assets/29698e32-53d7-4bfc-907e-79deda0502aa" />
 
 ---
 
-## 8️⃣ Criação de Ambiente Virtual e Instalação de Biblioteca
+## 8️⃣ Criação de Ambiente Virtual
 
-Comandos executados:
+```bash
+python3 -m venv venv
+source venv/bin/activate
+pip install cryptography
+```
 
-$ python3 -m venv venv  
-$ source venv/bin/activate  
-$ pip install cryptography  
-
-Descrição:
-
-Cria ambiente virtual Python.  
-Ativa o ambiente.  
-Instala a biblioteca cryptography para implementação de criptografia simétrica.
-
-<img width="1920" height="936" alt="PRINT 8 07_venv_cryptography_install" src="https://github.com/user-attachments/assets/b4a9784b-e2b0-47b5-bb9e-67a3c17ef940" />
+<img width="1920" height="936" alt="Ambiente Virtual" src="https://github.com/user-attachments/assets/b4a9784b-e2b0-47b5-bb9e-67a3c17ef940" />
 
 ---
 
-## 9️⃣ Geração de Chave de Criptografia
+## 9️⃣ Geração da Chave de Criptografia
 
-Comandos executados no interpretador Python:
+```python
+from cryptography.fernet import Fernet
+key = Fernet.generate_key()
+print(key)
+```
 
->>> from cryptography.fernet import Fernet  
->>> key = Fernet.generate_key()  
->>> print(key)  
-
-Descrição:
-
-Importa a classe Fernet.  
-Gera chave criptográfica simétrica.  
-Exibe a chave que será utilizada para criptografar os backups.
-
-<img width="1920" height="936" alt="PRINT 9 08_secure_backup_with_encryption" src="https://github.com/user-attachments/assets/de0e2930-311e-4629-a744-495055ea4ce6" />
+<img width="1920" height="936" alt="Geração de Chave" src="https://github.com/user-attachments/assets/de0e2930-311e-4629-a744-495055ea4ce6" />
 
 ---
 
-## 🔟 Backup Criptografado
+## 🔟 Backup Criptografado (.zip.enc)
 
-Comandos executados:
+```bash
+python3 backup.py
+ls backups
+```
 
-$ python3 backup.py  
-$ ls backups  
-
-Descrição:
-
-Executa o script já com suporte à criptografia.  
-Gera arquivo com extensão .zip.enc.  
-Lista o arquivo criptografado dentro da pasta backups.
-
-<img width="1920" height="936" alt="PRINT 10 09_encrypted_backup_restore_proof" src="https://github.com/user-attachments/assets/164e0341-de88-4312-b4aa-b0e88ebc8135" />
+<img width="1920" height="936" alt="Backup Criptografado" src="https://github.com/user-attachments/assets/164e0341-de88-4312-b4aa-b0e88ebc8135" />
 
 ---
 
 ## 1️⃣1️⃣ Restauração do Backup Criptografado
 
-Comandos executados:
+```bash
+python3 restore.py
+ls dados_restaurados
+```
 
-$ python3 restore.py  
-$ ls dados_restaurados  
+✔ Descriptografia  
+✔ Verificação de integridade  
+✔ Restauração controlada  
 
-Descrição:
-
-Executa o script restore.py.  
-Descriptografa o arquivo .zip.enc.  
-Restaura os arquivos para dados_restaurados.  
-Lista os arquivos restaurados para validação.
-
-<img width="1920" height="936" alt="PRINT 11 secure-backup-python" src="https://github.com/user-attachments/assets/e4196b00-0cb8-4408-9395-028f05c90ca8" />
+<img width="1920" height="936" alt="Restauração Segura" src="https://github.com/user-attachments/assets/e4196b00-0cb8-4408-9395-028f05c90ca8" />
 
 ---
 
-## 1️⃣2️⃣ Teste de Integridade com Falha
+## 1️⃣2️⃣ Teste de Violação de Integridade
 
-Comandos executados:
+```bash
+echo "123456" > backups/backup_YYYYMMDD_HHMMSS.hash
+python3 restore.py
+```
 
-$ echo "123456" > backups/backup_20260225_094050.hash 
-$ python3 restore.py  
+Resultado esperado:
 
-Descrição:
+```
+Integridade comprometida! Hash inválido.
+```
 
-Substitui o hash original por valor inválido.  
-Ao tentar restaurar, o script detecta inconsistência.  
-Exibe erro semelhante a:
-
-"Integridade comprometida! Hash inválido."
-
-Isso comprova que o mecanismo de verificação de integridade está funcionando corretamente.
-
-<img width="1920" height="936" alt="PRINT 12 “Bloqueio de Restauração Após Adulteração de Hash – Teste de Integridade”" src="https://github.com/user-attachments/assets/8b0c24cd-9844-41ff-9cb7-1f06ffbdd644" />
+<img width="1920" height="936" alt="Falha de Integridade Detectada" src="https://github.com/user-attachments/assets/8b0c24cd-9844-41ff-9cb7-1f06ffbdd644" />
 
 ---
 
-# ✅ Conclusão
+# 🔐 Tecnologias Utilizadas
 
-O projeto demonstra:
+- Python 3  
+- hashlib (SHA256)  
+- zipfile  
+- cryptography (Fernet)  
+- Kali Linux  
 
-- Implementação de backup automatizado
-- Verificação de integridade com SHA256
-- Registro de logs
-- Criptografia simétrica com Fernet
-- Detecção de adulteração de arquivos
+---
 
-Trata-se de uma aplicação prática dos conceitos de Segurança da Informação aplicados em ambiente Linux.
+# 🧠 Conceitos Aplicados
+
+- Criptografia Simétrica
+- Verificação de Integridade
+- Logging estruturado
+- Automação de processos
+- Simulação de adulteração maliciosa
+
+---
+
+# 🚀 Diferenciais Técnicos
+
+✔ Execução em ambiente real (Kali Linux)  
+✔ Implementação completa de integridade + criptografia  
+✔ Teste de ataque simulado  
+✔ Estrutura organizada e escalável  
+✔ Aplicável a cenários corporativos  
+
+---
+
+# 📌 Status do Projeto
+
+🟢 Finalizado  
+🔐 Funcional  
+🧪 Testado com simulação de falha  
+📁 Documentado  
+
+---
+
+# 👨‍💻 Autor
+
+**Marcio Augusto Mazzochi**  
+Projeto voltado para portfólio profissional em Segurança da Informação.

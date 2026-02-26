@@ -22,18 +22,18 @@
 ---
 
 ## 🗂 Estrutura do Projeto
-backup_lab/
-├── src/
-│   ├── backup.py
-│   └── restore.py
-├── dados_importantes/    # arquivos a serem salvos (não versionar)
-├── dados_restaurados/    # arquivos restaurados
-├── backups/              # backups gerados (não versionar)
-├── logs/                 # logs de execução (não versionar)
-├── prints/               # prints e saídas dos comandos
-├── IMPRESSOES.md         # documentação das execuções
-├── .gitignore
-└── README.md
+backup_lab/  
+├── src/  
+│   ├── backup.py  
+│   └── restore.py  
+├── dados_importantes/    # arquivos a serem salvos (não versionar)  
+├── dados_restaurados/    # arquivos restaurados  
+├── backups/              # backups gerados (não versionar)  
+├── logs/                 # logs de execução (não versionar)  
+├── prints/               # prints e saídas dos comandos  
+├── IMPRESSOES.md         # documentação das execuções  
+├── .gitignore  
+└── README.md  
 
 ---
 

@@ -17,14 +17,14 @@ Este projeto demonstra a criação de backups, criptografia, restauração e ver
 
 ## 🗂 Estrutura do projeto
 
-backup_lab/
-├── backup.py
-├── restore.py
-├── src/                  # scripts Python
-├── dados_importantes/    # arquivos a serem salvos (não versionar)
-├── backups/              # backups gerados (não versionar)
-├── logs/                 # logs de execução (não versionar)
-└── prints/               # prints e saídas dos comandos
+- backup_lab/
+  - backup.py
+  - restore.py
+  - src/                  # scripts Python
+  - dados_importantes/    # arquivos a serem salvos (não versionar)
+  - backups/              # backups gerados (não versionar)
+  - logs/                 # logs de execução (não versionar)
+  - prints/               # prints e saídas dos comandos
 
 ---
 

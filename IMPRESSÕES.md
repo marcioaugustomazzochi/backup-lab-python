@@ -1,43 +1,43 @@
-# 🔐 Secure Backup System
-### Professional Secure Backup Project with Integrity Verification and Encryption
+# 🔐 Sistema de Backup Seguro
+### Projeto Profissional de Backup com Criptografia e Verificação de Integridade
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
-![Linux](https://img.shields.io/badge/Platform-Kali%20Linux-black?logo=linux)
-![Security](https://img.shields.io/badge/Domain-Information%20Security-red)
-![Encryption](https://img.shields.io/badge/Encryption-Fernet-green)
-![Hash](https://img.shields.io/badge/Integrity-SHA256-orange)
-![Status](https://img.shields.io/badge/Status-Production%20Ready-brightgreen)
+![Linux](https://img.shields.io/badge/Plataforma-Kali%20Linux-black?logo=linux)
+![Segurança](https://img.shields.io/badge/Domínio-Segurança%20da%20Informação-red)
+![Criptografia](https://img.shields.io/badge/Criptografia-Fernet-green)
+![Hash](https://img.shields.io/badge/Integridade-SHA256-orange)
+![Status](https://img.shields.io/badge/Status-Pronto%20para%20Portfólio-brightgreen)
 
 ---
 
-## 🛡 Project Overview
+## 🛡 Visão Geral do Projeto
 
-This project implements a secure and automated backup system developed in Python within a Kali Linux environment.
+Este projeto implementa um sistema automatizado de backup seguro desenvolvido em Python dentro de um ambiente Kali Linux.
 
-It demonstrates practical application of core Information Security principles:
+Ele demonstra a aplicação prática de princípios fundamentais da Segurança da Informação:
 
-- Data integrity verification
-- Symmetric encryption
-- Secure restoration workflow
-- Structured logging
-- Tamper detection mechanisms
+- Verificação de integridade de dados
+- Criptografia simétrica
+- Processo seguro de restauração
+- Sistema estruturado de logs
+- Detecção de adulteração (tamper detection)
 
-The system simulates real-world defensive controls used in corporate environments.
-
----
-
-## 🎯 Technical Objectives
-
-- Automate backup generation  
-- Ensure file integrity using SHA256 hashing  
-- Implement symmetric encryption (Fernet)  
-- Log system activity for traceability  
-- Detect unauthorized modifications  
-- Securely restore encrypted backups  
+O sistema simula controles defensivos utilizados em ambientes corporativos.
 
 ---
 
-## 🧱 Project Structure
+## 🎯 Objetivos Técnicos
+
+- Automatizar a geração de backups  
+- Garantir integridade usando hash SHA256  
+- Implementar criptografia simétrica (Fernet)  
+- Registrar atividades em log  
+- Detectar modificações não autorizadas  
+- Restaurar backups criptografados com segurança  
+
+---
+
+## 🧱 Estrutura do Projeto
 
 backup_lab/  
 ├── backup.py  
@@ -50,19 +50,19 @@ backup_lab/
 
 ---
 
-# 🖥 Full Execution Demonstration
+# 🖥 Demonstração Completa da Execução
 
 ---
 
-## 1️⃣ Kali Linux Environment
+## 1️⃣ Ambiente Kali Linux
 
-Development and testing performed in a controlled Kali Linux lab environment.
+Desenvolvimento e testes realizados em laboratório controlado utilizando Kali Linux.
 
 <img width="1920" height="936" alt="Desktop Kali Linux" src="https://github.com/user-attachments/assets/a3c0611a-9825-48fb-ac2b-4dc01665a638" />
 
 ---
 
-## 2️⃣ Initial Project Setup
+## 2️⃣ Criação da Estrutura Inicial
 
 ```bash
 mkdir ~/backup_lab
@@ -74,7 +74,7 @@ mkdir backups logs
 
 ---
 
-## 3️⃣ Sensitive Data Simulation
+## 3️⃣ Simulação de Dados Sensíveis
 
 ```bash
 mkdir dados_importantes
@@ -86,21 +86,21 @@ echo "Senha super secreta" > dados_importantes/senha.txt
 
 ---
 
-## 4️⃣ Initial Backup Execution
+## 4️⃣ Execução do Backup Inicial
 
 ```bash
 python3 backup.py
 ```
 
-✔ Archive generation  
-✔ Automatic SHA256 calculation  
-✔ Log registration  
+✔ Geração do arquivo compactado  
+✔ Cálculo automático de SHA256  
+✔ Registro em log  
 
 <img width="1920" height="936" alt="Execução do Backup" src="https://github.com/user-attachments/assets/8fc27a8f-f04c-4a0a-be22-2871c5906696" />
 
 ---
 
-## 5️⃣ Manual Integrity Verification
+## 5️⃣ Verificação Manual de Integridade
 
 ```bash
 sha256sum backups/backup_YYYYMMDD_HHMMSS.zip
@@ -110,7 +110,7 @@ sha256sum backups/backup_YYYYMMDD_HHMMSS.zip
 
 ---
 
-## 6️⃣ Manual Backup Extraction
+## 6️⃣ Extração Manual do Backup
 
 ```bash
 unzip backups/*.zip -d .
@@ -121,7 +121,7 @@ ls
 
 ---
 
-## 7️⃣ Logging System Verification
+## 7️⃣ Verificação do Sistema de Logs
 
 ```bash
 rm -rf backups/
@@ -133,7 +133,7 @@ cat logs/backup.log
 
 ---
 
-## 8️⃣ Virtual Environment & Encryption Setup
+## 8️⃣ Ambiente Virtual e Instalação da Criptografia
 
 ```bash
 python3 -m venv venv
@@ -145,7 +145,7 @@ pip install cryptography
 
 ---
 
-## 9️⃣ Encryption Key Generation
+## 9️⃣ Geração da Chave Criptográfica
 
 ```python
 from cryptography.fernet import Fernet
@@ -157,7 +157,7 @@ print(key)
 
 ---
 
-## 🔟 Encrypted Backup (.zip.enc)
+## 🔟 Backup Criptografado (.zip.enc)
 
 ```bash
 python3 backup.py
@@ -168,29 +168,29 @@ ls backups
 
 ---
 
-## 1️⃣1️⃣ Secure Restoration Process
+## 1️⃣1️⃣ Processo de Restauração Segura
 
 ```bash
 python3 restore.py
 ls dados_restaurados
 ```
 
-✔ Decryption  
-✔ Integrity validation  
-✔ Controlled restoration  
+✔ Descriptografia  
+✔ Validação de integridade  
+✔ Restauração controlada  
 
 <img width="1920" height="936" alt="Restauração Segura" src="https://github.com/user-attachments/assets/e4196b00-0cb8-4408-9395-028f05c90ca8" />
 
 ---
 
-## 1️⃣2️⃣ Integrity Violation Simulation
+## 1️⃣2️⃣ Simulação de Violação de Integridade
 
 ```bash
 echo "123456" > backups/backup_YYYYMMDD_HHMMSS.hash
 python3 restore.py
 ```
 
-Expected output:
+Saída esperada:
 
 ```
 Integridade comprometida! Hash inválido.
@@ -200,7 +200,7 @@ Integridade comprometida! Hash inválido.
 
 ---
 
-# 🔐 Technologies Used
+# 🔐 Tecnologias Utilizadas
 
 - Python 3  
 - hashlib (SHA256)  
@@ -210,37 +210,37 @@ Integridade comprometida! Hash inválido.
 
 ---
 
-# 🧠 Security Concepts Demonstrated
+# 🧠 Conceitos de Segurança Demonstrados
 
-- Symmetric Encryption  
-- Cryptographic Hashing  
-- Integrity Validation  
-- Secure Logging  
-- Tamper Detection  
-- Controlled Data Recovery  
-
----
-
-# 🚀 Technical Highlights
-
-✔ Real Linux security lab execution  
-✔ Full encryption + integrity workflow  
-✔ Simulated tampering scenario  
-✔ Clean and scalable structure  
-✔ Portfolio-ready security implementation  
+- Criptografia Simétrica  
+- Hash Criptográfico  
+- Validação de Integridade  
+- Registro Seguro de Logs  
+- Detecção de Adulteração  
+- Recuperação Controlada de Dados  
 
 ---
 
-# 📌 Project Status
+# 🚀 Diferenciais Técnicos
 
-🟢 Completed  
-🔐 Functional  
-🧪 Tested with simulated attack  
-📁 Fully documented  
+✔ Execução real em laboratório Linux  
+✔ Fluxo completo de criptografia + integridade  
+✔ Simulação prática de ataque  
+✔ Estrutura organizada e escalável  
+✔ Projeto profissional para portfólio  
 
 ---
 
-# 👨‍💻 Author
+# 📌 Status do Projeto
+
+🟢 Concluído  
+🔐 Funcional  
+🧪 Testado com cenário de ataque simulado  
+📁 Totalmente documentado  
+
+---
+
+# 👨‍💻 Autor
 
 **Marcio Augusto Mazzochi**  
-Information Security | Cybersecurity | Automation Projects
+Segurança da Informação | Cibersegurança | Projetos de Automação

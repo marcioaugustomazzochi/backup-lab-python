@@ -1,3 +1,4 @@
+<pre>
 # 🔐 Projeto de Backup e Restauração
 
 [![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python&logoColor=white)](https://www.python.org/)
@@ -12,104 +13,125 @@
 ---
 
 ## 🎯 Objetivo
-
 - 💾 Automatizar backups de arquivos importantes  
 - 🔒 Criptografar os backups usando **Fernet**  
 - ✅ Verificar integridade com **hash SHA256**  
 - 🔄 Restaurar os arquivos de forma segura  
+- 🛡 Detectar adulterações (tamper detection)
 
 ---
 
-## 🗂 Estrutura do projeto
-
-backup_lab/  
-├── backup.py  
-├── restore.py  
-├── src/                  # scripts Python  
-├── dados_importantes/    # arquivos a serem salvos (não versionar)  
-├── backups/              # backups gerados (não versionar)  
-├── logs/                 # logs de execução (não versionar)  
-└── prints/               # prints e saídas dos comandos  
+## 🗂 Estrutura do Projeto
+backup_lab/
+├── src/
+│   ├── backup.py
+│   └── restore.py
+├── dados_importantes/    # arquivos a serem salvos (não versionar)
+├── dados_restaurados/    # arquivos restaurados
+├── backups/              # backups gerados (não versionar)
+├── logs/                 # logs de execução (não versionar)
+├── prints/               # prints e saídas dos comandos
+├── IMPRESSOES.md         # documentação das execuções
+├── .gitignore
+└── README.md
 
 ---
 
-## 🛠 Tecnologias utilizadas
-
+## 🛠 Tecnologias Utilizadas
 - Python 3.10+ – linguagem principal do projeto  
 - Cryptography (Fernet) – criptografia dos backups  
+- SHA256 (hashlib) – verificação de integridade  
 - Kali Linux – ambiente de desenvolvimento e testes  
-- SHA256 – verificação de integridade  
 - Git/GitHub – versionamento e publicação do código  
 
 ---
 
-## 🏃 Como usar
+## 🏃 Como Usar
 
-- 📁 Criar arquivos importantes em `dados_importantes/`  
-- 🗜️ Executar backup:  
-  `python3 src/backup.py`  
-- 🔑 Verificar integridade:  
-  `sha256sum backups/*.zip.enc`  
-- 🔄 Restaurar backup:  
-  `python3 src/restore.py`  
-- ⚠️ Testar integridade falha (opcional):  
-  `echo "123456" > backups/*.hash`  
-  `python3 src/restore.py`  
+### 📁 Criar arquivos importantes
+Adicionar arquivos dentro da pasta `dados_importantes/`.
 
-> ⚠️ Atenção: os arquivos em `dados_importantes/`, `backups/`, `logs/` e a chave `.key` **não devem ser comitados** no GitHub.
+### 🗜️ Executar Backup
+python3 src/backup.py
 
----
+✔ Geração de arquivo criptografado `.zip.enc`  
+✔ Cálculo automático de SHA256  
+✔ Registro em log  
 
-## 📂 Estrutura de pastas sugerida
+### 🔍 Verificar Integridade Manualmente
+sha256sum backups/*.zip.enc
 
-backup_lab/  
-├── backup.py  
-├── restore.py  
-├── src/  
-├── dados_importantes/   # ignorado pelo Git  
-├── backups/             # ignorado pelo Git  
-├── logs/                # ignorado pelo Git  
-└── prints/              # prints de comandos e saídas  
+### 🔄 Restaurar Backup
+python3 src/restore.py
 
-Adicionar `.gitignore` recomendado:
+✔ Descriptografia  
+✔ Validação de integridade  
+✔ Restauração segura  
 
-- venv/  
-- backups/  
-- logs/  
-- dados_importantes/  
-- *.key  
+### 🚨 Simular Violação de Integridade (Opcional)
+echo "123456" > backups/*.hash
+python3 src/restore.py
+
+Saída esperada:
+Integridade comprometida! Hash inválido.
 
 ---
 
 ## 🔎 Documentação das Execuções
+Para visualizar todas as evidências de execução, saídas de comandos e testes realizados, consulte o arquivo `IMPRESSOES.md`  
 
-Para visualizar todas as evidências de execução, saídas de comandos e testes realizados, consulte o arquivo:
+Ele contém:
+- Execução do backup  
+- Geração de hash  
+- Processo de criptografia  
+- Restauração segura  
+- Teste de violação de integridade  
 
-📄 `IMPRESSOES.md`
+---
 
-Este arquivo contém registros detalhados do funcionamento do sistema, incluindo:
+## ⚠️ Observações Importantes
+Itens que **não devem ser versionados no GitHub**:
+- dados_importantes/  
+- backups/  
+- logs/  
+- venv/  
+- *.key  
 
-- Execução do backup
-- Geração de hash
-- Processo de criptografia
-- Restauração segura
-- Teste de violação de integridade
+.gitignore recomendado:
+venv/
+backups/
+logs/
+dados_importantes/
+*.key
 
 ---
 
 ## ⚙️ Pré-requisitos
-
 - 🐍 Python 3.10+  
 - 🔐 Biblioteca `cryptography`  
-- 💻 Sistema Linux (testado no Kali Linux)  
+- 💻 Sistema Linux (testado no Kali Linux)
 
 Instalação do ambiente virtual:
-
-```bash
 python3 -m venv venv
 source venv/bin/activate
 pip install cryptography
-👨‍💻 Autor
 
-Marcio Augusto Mazzochi
-Segurança da Informação | Cibersegurança | Projetos de Automação
+---
+
+## 📌 Status do Projeto
+🟢 Concluído  
+🔐 Funcional  
+🧪 Testado com simulação de ataque  
+📁 Totalmente documentado  
+
+---
+
+## 👨‍💻 Autor
+Marcio Augusto Mazzochi  
+Segurança da Informação | Cibersegurança | Projetos de Automação  
+
+---
+
+## ⭐ Apoie o Projeto
+Se este projeto agregou valor ao seu aprendizado, considere deixar uma estrela no repositório.  
+</pre>

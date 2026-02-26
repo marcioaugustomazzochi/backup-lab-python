@@ -272,3 +272,7 @@ Embora não represente uma implementação formal de certificação, o sistema a
 
 **Marcio Augusto Mazzochi**  
 Segurança da Informação | Cibersegurança | Projetos de Automação
+
+---
+
+⭐ Se este projeto agregou valor, sinta-se à vontade para deixar uma estrela no repositório.

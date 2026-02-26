@@ -1,8 +1,13 @@
 # 🔐 Projeto de Backup e Restauração
 
-[![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)](https://www.python.org/) [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE) [![GitHub Repo Size](https://img.shields.io/badge/Repo-Size-blue)
+[![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python&logoColor=white)](https://www.python.org/)
+[![Platform](https://img.shields.io/badge/Platform-Linux-black?logo=linux&logoColor=white)]()
+[![Cryptography](https://img.shields.io/badge/Encryption-Fernet-green)]()
+[![Integrity](https://img.shields.io/badge/Integrity-SHA256-orange)]()
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Project Status](https://img.shields.io/badge/Status-Functional-brightgreen)]()
 
-> Este projeto demonstra a criação de **backups**, **criptografia**, **restauração** e **verificação de integridade** utilizando **Python** e **Kali Linux**.
+> 🔐 Sistema de backup seguro com criptografia simétrica e verificação de integridade, desenvolvido em ambiente Linux para simulação de controles corporativos.
 
 ---
 
@@ -66,7 +71,7 @@ backup_lab/
 ├── logs/                # ignorado pelo Git  
 └── prints/              # prints de comandos e saídas  
 
-Adicionar `.gitignore` recomendado:  
+Adicionar `.gitignore` recomendado:
 
 - venv/  
 - backups/  
@@ -78,7 +83,7 @@ Adicionar `.gitignore` recomendado:
 
 ## 🔗 Documentação dos prints
 
-Para ver todos os **prints das saídas e comandos**, consulte o arquivo `prints.md` na pasta `prints/`.  
+Para ver todos os **prints das saídas e comandos**, consulte o arquivo `prints.md` na pasta `prints/`.
 
 ---
 
@@ -94,5 +99,7 @@ Instalação do ambiente virtual:
 python3 -m venv venv
 source venv/bin/activate
 pip install cryptography
+👨‍💻 Autor
 
-Desenvolvido com Python & Kali Linux
+Marcio Augusto Mazzochi
+Segurança da Informação | Cibersegurança | Projetos de Automação

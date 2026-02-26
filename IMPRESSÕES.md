@@ -1,55 +1,68 @@
 # 🔐 Secure Backup System
-### Projeto Profissional de Backup com Verificação de Integridade e Criptografia
+### Professional Secure Backup Project with Integrity Verification and Encryption
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
 ![Linux](https://img.shields.io/badge/Platform-Kali%20Linux-black?logo=linux)
-![Security](https://img.shields.io/badge/Focus-Security-red)
+![Security](https://img.shields.io/badge/Domain-Information%20Security-red)
 ![Encryption](https://img.shields.io/badge/Encryption-Fernet-green)
-![Hash](https://img.shields.io/badge/Hash-SHA256-orange)
-![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
+![Hash](https://img.shields.io/badge/Integrity-SHA256-orange)
+![Status](https://img.shields.io/badge/Status-Production%20Ready-brightgreen)
 
 ---
 
-## 🛡 Sobre o Projeto
+## 🛡 Project Overview
 
-Sistema completo de backup seguro desenvolvido em Python no Kali Linux, aplicando conceitos reais de Segurança da Informação:
+This project implements a secure and automated backup system developed in Python within a Kali Linux environment.
 
-- Integridade de dados
-- Criptografia simétrica
-- Registro estruturado de logs
-- Automação de processos
-- Detecção de adulteração
+It demonstrates practical application of core Information Security principles:
 
----
+- Data integrity verification
+- Symmetric encryption
+- Secure restoration workflow
+- Structured logging
+- Tamper detection mechanisms
 
-## 🧱 Estrutura do Projeto
-
-```
-backup_lab/
-├── backup.py
-├── restore.py
-├── dados_importantes/
-├── dados_restaurados/
-├── backups/
-├── logs/
-└── venv/
-```
+The system simulates real-world defensive controls used in corporate environments.
 
 ---
 
-# 🖥 Demonstração – Execução Completa
+## 🎯 Technical Objectives
+
+- Automate backup generation  
+- Ensure file integrity using SHA256 hashing  
+- Implement symmetric encryption (Fernet)  
+- Log system activity for traceability  
+- Detect unauthorized modifications  
+- Securely restore encrypted backups  
 
 ---
 
-## 1️⃣ Desktop do Kali Linux
+## 🧱 Project Structure
 
-Ambiente operacional utilizado no desenvolvimento e testes.
+backup_lab/  
+├── backup.py  
+├── restore.py  
+├── dados_importantes/  
+├── dados_restaurados/  
+├── backups/  
+├── logs/  
+└── venv/  
+
+---
+
+# 🖥 Full Execution Demonstration
+
+---
+
+## 1️⃣ Kali Linux Environment
+
+Development and testing performed in a controlled Kali Linux lab environment.
 
 <img width="1920" height="936" alt="Desktop Kali Linux" src="https://github.com/user-attachments/assets/a3c0611a-9825-48fb-ac2b-4dc01665a638" />
 
 ---
 
-## 2️⃣ Criação da Estrutura Inicial
+## 2️⃣ Initial Project Setup
 
 ```bash
 mkdir ~/backup_lab
@@ -61,7 +74,7 @@ mkdir backups logs
 
 ---
 
-## 3️⃣ Criação de Dados Sensíveis
+## 3️⃣ Sensitive Data Simulation
 
 ```bash
 mkdir dados_importantes
@@ -73,17 +86,21 @@ echo "Senha super secreta" > dados_importantes/senha.txt
 
 ---
 
-## 4️⃣ Execução do Backup Inicial
+## 4️⃣ Initial Backup Execution
 
 ```bash
 python3 backup.py
 ```
 
+✔ Archive generation  
+✔ Automatic SHA256 calculation  
+✔ Log registration  
+
 <img width="1920" height="936" alt="Execução do Backup" src="https://github.com/user-attachments/assets/8fc27a8f-f04c-4a0a-be22-2871c5906696" />
 
 ---
 
-## 5️⃣ Validação Manual de Integridade
+## 5️⃣ Manual Integrity Verification
 
 ```bash
 sha256sum backups/backup_YYYYMMDD_HHMMSS.zip
@@ -93,7 +110,7 @@ sha256sum backups/backup_YYYYMMDD_HHMMSS.zip
 
 ---
 
-## 6️⃣ Extração Manual do Backup
+## 6️⃣ Manual Backup Extraction
 
 ```bash
 unzip backups/*.zip -d .
@@ -104,7 +121,7 @@ ls
 
 ---
 
-## 7️⃣ Novo Backup e Registro em Log
+## 7️⃣ Logging System Verification
 
 ```bash
 rm -rf backups/
@@ -116,7 +133,7 @@ cat logs/backup.log
 
 ---
 
-## 8️⃣ Criação de Ambiente Virtual
+## 8️⃣ Virtual Environment & Encryption Setup
 
 ```bash
 python3 -m venv venv
@@ -128,7 +145,7 @@ pip install cryptography
 
 ---
 
-## 9️⃣ Geração da Chave de Criptografia
+## 9️⃣ Encryption Key Generation
 
 ```python
 from cryptography.fernet import Fernet
@@ -140,7 +157,7 @@ print(key)
 
 ---
 
-## 🔟 Backup Criptografado (.zip.enc)
+## 🔟 Encrypted Backup (.zip.enc)
 
 ```bash
 python3 backup.py
@@ -151,29 +168,29 @@ ls backups
 
 ---
 
-## 1️⃣1️⃣ Restauração do Backup Criptografado
+## 1️⃣1️⃣ Secure Restoration Process
 
 ```bash
 python3 restore.py
 ls dados_restaurados
 ```
 
-✔ Descriptografia  
-✔ Verificação de integridade  
-✔ Restauração controlada  
+✔ Decryption  
+✔ Integrity validation  
+✔ Controlled restoration  
 
 <img width="1920" height="936" alt="Restauração Segura" src="https://github.com/user-attachments/assets/e4196b00-0cb8-4408-9395-028f05c90ca8" />
 
 ---
 
-## 1️⃣2️⃣ Teste de Violação de Integridade
+## 1️⃣2️⃣ Integrity Violation Simulation
 
 ```bash
 echo "123456" > backups/backup_YYYYMMDD_HHMMSS.hash
 python3 restore.py
 ```
 
-Resultado esperado:
+Expected output:
 
 ```
 Integridade comprometida! Hash inválido.
@@ -183,7 +200,7 @@ Integridade comprometida! Hash inválido.
 
 ---
 
-# 🔐 Tecnologias Utilizadas
+# 🔐 Technologies Used
 
 - Python 3  
 - hashlib (SHA256)  
@@ -193,36 +210,37 @@ Integridade comprometida! Hash inválido.
 
 ---
 
-# 🧠 Conceitos Aplicados
+# 🧠 Security Concepts Demonstrated
 
-- Criptografia Simétrica
-- Verificação de Integridade
-- Logging estruturado
-- Automação de processos
-- Simulação de adulteração maliciosa
-
----
-
-# 🚀 Diferenciais Técnicos
-
-✔ Execução em ambiente real (Kali Linux)  
-✔ Implementação completa de integridade + criptografia  
-✔ Teste de ataque simulado  
-✔ Estrutura organizada e escalável  
-✔ Aplicável a cenários corporativos  
+- Symmetric Encryption  
+- Cryptographic Hashing  
+- Integrity Validation  
+- Secure Logging  
+- Tamper Detection  
+- Controlled Data Recovery  
 
 ---
 
-# 📌 Status do Projeto
+# 🚀 Technical Highlights
 
-🟢 Finalizado  
-🔐 Funcional  
-🧪 Testado com simulação de falha  
-📁 Documentado  
+✔ Real Linux security lab execution  
+✔ Full encryption + integrity workflow  
+✔ Simulated tampering scenario  
+✔ Clean and scalable structure  
+✔ Portfolio-ready security implementation  
 
 ---
 
-# 👨‍💻 Autor
+# 📌 Project Status
+
+🟢 Completed  
+🔐 Functional  
+🧪 Tested with simulated attack  
+📁 Fully documented  
+
+---
+
+# 👨‍💻 Author
 
 **Marcio Augusto Mazzochi**  
-Projeto voltado para portfólio profissional em Segurança da Informação.
+Information Security | Cybersecurity | Automation Projects

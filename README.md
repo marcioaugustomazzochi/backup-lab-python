@@ -1,4 +1,4 @@
-<pre>
+
 # 🔐 Projeto de Backup e Restauração
 
 [![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python&logoColor=white)](https://www.python.org/)
@@ -134,4 +134,4 @@ Segurança da Informação | Cibersegurança | Projetos de Automação
 
 ## ⭐ Apoie o Projeto
 Se este projeto agregou valor ao seu aprendizado, considere deixar uma estrela no repositório.  
-</pre>
+

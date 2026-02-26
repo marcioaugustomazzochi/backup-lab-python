@@ -81,9 +81,19 @@ Adicionar `.gitignore` recomendado:
 
 ---
 
-## 🔗 Documentação dos prints
+## 🔎 Documentação das Execuções
 
-Para ver todos os **prints das saídas e comandos**, consulte o arquivo `prints.md` na pasta `prints/`.
+Para visualizar todas as evidências de execução, saídas de comandos e testes realizados, consulte o arquivo:
+
+📄 `IMPRESSOES.md`
+
+Este arquivo contém registros detalhados do funcionamento do sistema, incluindo:
+
+- Execução do backup
+- Geração de hash
+- Processo de criptografia
+- Restauração segura
+- Teste de violação de integridade
 
 ---
 
